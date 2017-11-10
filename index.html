@@ -8,7 +8,7 @@ Artica Cuadra
         </style>
          
         <script>
-                function bill() {
+                 function bill() {
                         var quantity1=document.getElemetnById("quantity1");
                         var quantity2=document.getElemetnById("quantity2");
                         var quantity3=document.getElemetnById("quantity3");
@@ -36,6 +36,20 @@ Artica Cuadra
                         build+="___________________________________<br>";
                         build+="Total:"+ "$"+ total.toFixed(2);
                         output.innerHTML=build;
+                        
+                        var wprice1= 25;
+                        var wprice2= 25;
+                        var wprice3= 30;
+                        var wprice5= 35;
+                        var wprice6= 35;
+                        var wprice7= 35;
+                        var wprice8=40;
+                        var cSubtotal= (wprice1 * parseInt(quantity1.value)) + (wprice2 * parseInt(quantity2.value)) + (wprice3 * parseInt(quantity3.value))+(wprice5 * parseInt(quantity5.value)) + (wprice6 * parseInt(quantity6.value)) + (wprice7 * parseInt(quantity7.value))+ (wprice8 * parseInt(quantity8.value));
+                  
+                        var profit= customersubtotal - cSubtotal;
+                        console.log("Your Profit is: " + profit);
+                        var totalItemsSold= parseInt(quantity1.value) + parseInt(quantity2.value) + parseInt(quantity3.value) + parseInt(quantity5.value) + parseInt(quantity6.value) + parseInt(quantity6.value) + parseInt(quantity8.value);
+                        console.log("Amount of Total Items Sold is " + totalItemsSold);
                
 
         </script>
